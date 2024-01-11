@@ -13,7 +13,7 @@
     <title>一覧</title>
 </head>
 <body>
-    <button type="button">新規登録</button>';
+    <button type="button">新規登録</button>
     <table>
         <tr>
             <th>サロン名</th><th>カテゴリ</th><th>電話番号</th><th>住所</th><th></th><th></th>
@@ -28,8 +28,8 @@
         echo '<td>', $row['category_name'], '</td>';
         echo '<td>', $row['phone'], '</td>';
         echo '<td>', $address, '</td>';
-        echo '<td><button onclick="location.href=`update.php?id=', $row['salon_id'], '`">更新</button></td>';
-        echo '<td><button onclick="location.href=`delete.php?id=', $row['salon_id'], '`">削除</button></td>';
+        echo `<td><button type="button" onclick="location.href='update.php?id=`, $row['salon_id'], `'">更新</button></td>`;
+        echo `<td><button type="button" onclick="location.href='delete.php?id=`, $row['salon_id'], `'">削除</button></td>`;
         echo '</tr>';
     }
 ?>
