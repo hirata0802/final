@@ -1,0 +1,83 @@
+
+table{
+    border-color: #dcdcdc;
+    border-collapse:  collapse;
+    width: 70%;
+}
+th, td{
+    text-align:  center;
+    border: solid 2px;
+    border-color: #808080;
+}
+
+/**********ボタン***********/
+
+/*新規登録*/
+.btn-new {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.btn-new:hover {
+    background: #67c5ff;
+    color: white;
+}
+
+/*更新*/
+.btn-upd {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0;
+    text-decoration: none;
+    color: #67c5ff;
+}
+
+.btn-upd:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    top:100%;
+    left: 0;
+    border-radius: 3px;
+    background:#67c5ff;
+    transition: .2s;
+}
+
+.btn-upd:hover:before {
+    top: -webkit-calc(100% - 3px);
+    top: calc(100% - 3px);
+}
+
+/*削除*/
+.btn-del {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0;
+    text-decoration: none;
+    color: #67c5ff;
+}
+
+.btn-del:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    top:100%;
+    left: 0;
+    border-radius: 1px;
+    background:#67c5ff;
+    transition: .2s;
+}
+
+.btn-del:hover:before {
+    top: -webkit-calc(100% - 3px);
+    top: calc(100% - 3px);
+}
