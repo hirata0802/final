@@ -1,19 +1,88 @@
+/***********全体***********/
+body {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+    background-image: url(./bg.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-table{
+.main{
+    background:#ffffff59 ;
+    height: 100vh;
+}
+/***********メニュー***********/
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    box-sizing: content-box;
+    background-color: #00000080;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: auto;
+}
+li {
+    list-style: none;
+}
+
+/***********テーブル***********/
+table {
     border-color: #dcdcdc;
     border-collapse:  collapse;
     width: 70%;
+    margin: 50px auto;
+    background-color: #debecc;
 }
-th, td{
+th, td {
     text-align:  center;
-    border: solid 2px;
-    border-color: #808080;
+    border: solid 1px;
+    border-color: #dcdcdc;
 }
 
 /**********ボタン***********/
-
 /*新規登録*/
 .btn-new {
+    right: 20%;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.btn-new:hover {
+    background: #67c5ff;
+    color: white;
+}
+/*戻る*/
+.btn-new {
+    right: 20%;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.btn-new:hover {
+    background: #67c5ff;
+    color: white;
+}
+/*新規登録*/
+.btn-new {
+    right: 20%;
     display: inline-block;
     padding: 0.3em 1em;
     text-decoration: none;
@@ -33,20 +102,20 @@ th, td{
     position: relative;
     display: inline-block;
     font-weight: bold;
-    padding: 0.25em 0;
+    padding: 0.01em 0;
     text-decoration: none;
-    color: #67c5ff;
+    color: #6495ed;
 }
 
 .btn-upd:before {
     position: absolute;
     content: '';
     width: 100%;
-    height: 4px;
+    height: 2px;
     top:100%;
     left: 0;
-    border-radius: 3px;
-    background:#67c5ff;
+    border-radius: 1px;
+    background: #6495ed;
     transition: .2s;
 }
 
@@ -60,9 +129,9 @@ th, td{
     position: relative;
     display: inline-block;
     font-weight: bold;
-    padding: 0.25em 0;
+    padding: 0.01em 0;
     text-decoration: none;
-    color: #67c5ff;
+    color: #b22222;
 }
 
 .btn-del:before {
@@ -73,7 +142,7 @@ th, td{
     top:100%;
     left: 0;
     border-radius: 1px;
-    background:#67c5ff;
+    background: #b22222;
     transition: .2s;
 }
 

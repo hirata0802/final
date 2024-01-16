@@ -6,4 +6,3 @@
     <link rel="stylesheet" href="css/style.css">
     <title>サロン</title>
 </head>
-<body>

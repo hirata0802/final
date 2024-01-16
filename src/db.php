@@ -7,7 +7,7 @@
             $maxid = $row['max(salon_id)'];
         }
         $maxid++;
-        $sql=$pdo->prepare('insert into salon values (?,?,?,?,?,?,?,?)');
+        $sql=$pdo->prepare('insert into salon values (?,?,?,?,?,?,?,?,?)');
         $sql->execute([
             $maxid,
             $_POST['name'],
@@ -19,8 +19,7 @@
             $_POST['link'],
             $_POST['category']
         ]);
-        header('Location: ./list.php?db=register');
-        exit();
+        $db = 'register';
         //サロン名が同じとき
         /*$sql = $pdo -> query('select * from salon');
         foreach($sql as $row){
@@ -41,13 +40,12 @@
             $_POST['category'],
             $_POST['id']
         ]);
-        header('Location: ./list.php?db=update');
-        exit();
+        $db = 'update';
     }else if($_POST['db'] == 'delete'){
         $sql=$pdo->prepare('delete from salon where salon_id=?');
         $sql->execute([$_POST['id']]);
-        header('Location: ./list.php?db=delete');
-        exit();
+        $db = 'delete';
     }
-
+    header('Location: ./message.php?db='.$db);
+    exit();
 ?>
