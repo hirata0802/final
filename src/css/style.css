@@ -11,6 +11,9 @@ body {
 .kari-div {
     display: inline;
 }
+p {
+    font-size: 19px;
+}
 /*********************メニュー*********************/
 nav {
     position: sticky;
@@ -19,7 +22,7 @@ nav {
     width: 100%;
     height: 90px;
     box-sizing: content-box;
-    background-color: #00000080;
+    background-color: #00000060;
     margin-bottom: 50px;
 }
 ul {
@@ -34,7 +37,7 @@ li {
 }
 h1 {
     margin: auto;
-    font-size: 40px;
+    font-size: 45px;
 }
 .menu_title {
     top: 20px;
@@ -55,7 +58,7 @@ table {
 th, td {
     text-align:  center;
     border: solid 1px;
-    border-color: #dcdcdc;
+    border-color: #00000040;
 }
 th {
     background-color: #debecc;
@@ -81,21 +84,57 @@ a {
     font-weight: bold;
     height: 25px;
 }
-/**********次の遷移**********/
+/**********新規登録**********/
 .btn-new {
+    right: 20%;
+    display: inline-block;
+    font-size: 16px;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #000000;
+    border: solid 3px #c97586;
+    border-radius: 20px;
+    transition: .4s;
+    background-color: #ede4e199;
+}
+
+.btn-new:hover {
+    background: #c97586;
+    color: #000000;
+}
+/**********カテゴリ登録**********/
+.btn-new {
+    right: 20%;
+    display: inline-block;
+    font-size: 16px;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #000000;
+    border: solid 3px #c97586;
+    border-radius: 20px;
+    transition: .4s;
+    background-color: #ede4e199;
+}
+
+.btn-new:hover {
+    background: #c97586;
+    color: #000000;
+}
+/**********次の遷移**********/
+.btn-next {
     right: 20%;
     display: inline-block;
     padding: 0.3em 1em;
     text-decoration: none;
     color: #000000;
-    border: solid 2px #de82a7;
-    border-radius: 3px;
+    border: solid 2px #c97586;
+    border-radius: 20px;
     transition: .4s;
     background-color: #ede4e180;
 }
 
-.btn-new:hover {
-    background: #de82a7;
+.btn-next:hover {
+    background: #c97586;
     color: #000000;
 }
 /**********戻る**********/
@@ -103,10 +142,11 @@ a {
     right: 20%;
     display: inline-block;
     padding: 0.3em 1em;
+    margin-top: 30px;
     text-decoration: none;
     color: #000000;
     border: solid 2px #707070;
-    border-radius: 3px;
+    border-radius: 20px;
     transition: .4s;
     background-color: #ede4e180;
 }
@@ -120,16 +160,17 @@ a {
     right: 20%;
     display: inline-block;
     padding: 0.3em 1em;
+    margin: 10px 0 30px 0;
     text-decoration: none;
     color: #000000;
-    border: solid 2px #707070;
-    border-radius: 3px;
+    border: solid 2px #274a78;
+    border-radius: 20px;
     transition: .4s;
     background-color: #ede4e180;
 }
 
 .btn-search:hover {
-    background: #707070;
+    background: #274a78;
     color: #ffffff;
 }
 /**********更新***********/
@@ -223,15 +264,15 @@ a {
     width: 90vh;
     padding: 0 16px;
     margin-bottom: 10px;
-    border-radius: 4px;
+    border-radius: 20px;
     border: none;
-    box-shadow: 0 0 0 1px #ccc inset;
+    box-shadow: 0 0 0 1.5px #a89dac inset;
     background-color: #ede4e1;
 }
 
 .inp-text:focus {
     outline: 0;
-    box-shadow: 0 0 0 2px #debecc inset;
+    box-shadow: 0 0 0 2px #c97586 inset;
 }
 
 /**********harf text***********/
@@ -240,32 +281,32 @@ a {
     width: 42vh;
     padding: 0 16px;
     margin-bottom: 10px;
-    border-radius: 4px;
+    border-radius: 20px;
     border: none;
-    box-shadow: 0 0 0 1px #ccc inset;
+    box-shadow: 0 0 0 1.5px #a89dac inset;
     background-color: #ede4e1;
 }
 
 .inp-text-harf:focus {
     outline: 0;
-    box-shadow: 0 0 0 2px #debecc inset;
+    box-shadow: 0 0 0 2px #c97586 inset;
 }
 
-/*************search name**********/
+/*************検索**********/
 .search-name {
     height: 40px;
     width: 42vh;
     padding: 0 16px;
     margin-bottom: 10px;
-    border-radius: 4px;
+    border-radius: 20px;
     border: none;
-    box-shadow: 0 0 0 1px #ccc inset;
+    box-shadow: 0 0 0 1.5px #a89dac inset;
     background-color: #ede4e1;
 }
 
 .search-name:focus {
     outline: 0;
-    box-shadow: 0 0 0 2px #debecc inset;
+    box-shadow: 0 0 0 2px #c97586 inset;
 }
 
 /*********************select*********************/
@@ -304,8 +345,8 @@ a {
     height: 40px;
     padding: .4em calc(.8em + 30px) .4em .8em;
     border: none;
-    box-shadow: 0 0 0 1px #ccc inset;
-    border-radius: 4px;
+    box-shadow: 0 0 0 1.5px #a89dac inset;
+    border-radius: 20px;
     background-color: #ede4e1;
     color: #333333;
     cursor: pointer;
@@ -313,7 +354,7 @@ a {
 
 .inp-select select:focus {
     outline: 0;
-    box-shadow: 0 0 0 2px #debecc inset;
+    box-shadow: 0 0 0 2px #c97586 inset;
 }
 
 /**********search**********/
@@ -348,8 +389,8 @@ a {
     height: 40px;
     padding: .4em calc(.8em + 30px) .4em .8em;
     border: none;
-    box-shadow: 0 0 0 1px #ccc inset;
-    border-radius: 4px;
+    box-shadow: 0 0 0 1.5px #a89dac inset;
+    border-radius: 20px;
     background-color: #ede4e1;
     color: #333333;
     cursor: pointer;
@@ -357,8 +398,5 @@ a {
 
 .search-category select:focus {
     outline: 0;
-    box-shadow: 0 0 0 2px #debecc inset;
+    box-shadow: 0 0 0 2px #c97586 inset;
 }
-
-
-

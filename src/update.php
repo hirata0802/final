@@ -34,8 +34,6 @@
         <input type="hidden" name="db" value="update">
     </form>
     <a href="list.php" class="btn-rtn">　戻る　</a>
-    <button form="up"><a class="btn-new">更新する</a></button>
-    <script src="./js/jquery-3.7.0.min.js"></script>
-    <script src="./js/add.js"></script>
+    <button form="up"><a class="btn-next">更新する</a></button>
 </body>
 <?php require 'footer.php'; ?>

@@ -12,7 +12,7 @@
             <input type="text" class="search-name" name="nameSearch" placeholder="サロン名で探す">
             <label class="search-category">
                 <select name="categorySearch">
-                <?php
+                    <?php
                     echo '<label class="gray">';
                     echo '<option value="" hidden>カテゴリで探す</option>';
                     echo '</label>';
@@ -21,10 +21,11 @@
                     foreach($sql as $row){
                         echo '<option value="', $row['category_id'], '">', $row['category_name'], '</option>';
                     }
-                ?>
+                    ?>
                 </select>
-            </label><br>
-            <button><a class="btn-search">　検索　</a></button><br>
+            </label>
+            <input type="text" class="search-name" name="placeSearch" placeholder="都道府県で探す"><br>
+            <button><a class="btn-search">検索</a></button><br>
         </form>
         <?php
             $pdo = new PDO($connect, USER, PASS);
@@ -37,6 +38,10 @@
             if(!empty($_POST['categorySearch'])){
                 $sql.=' and salon.category_id = ?';
                 $contains[]=$_POST['categorySearch'];
+            }
+            if(!empty($_POST['placeSearch'])){
+                $sql.=' and salon.prefectures = ?';
+                $contains[]=$_POST['placeSearch'];
             }
             $sql.=' order by salon.category_id';
             $result=$pdo->prepare($sql);
