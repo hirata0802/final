@@ -1,7 +1,25 @@
+<?php session_start(); ?>
 <?php require 'db_connect.php'; ?>
 <?php
     $pdo = new PDO($connect, USER, PASS);
     if($_POST['db'] == 'register'){
+        //サロン名が同じとき
+        $sql=$pdo->prepare('select * from salon where salon_name=?');
+        $sql->execute([$_POST['name']]);
+        if(!empty($sql->fetchAll())){
+            $_SESSION['newSalon'] = [
+                'name' => $_POST['name'],
+                'phone' => $_POST['phone'],
+                'prefecture' => $_POST['prefecture'],
+                'city' => $_POST['city'],
+                'address' => $_POST['address'],
+                'apartment' => $_POST['apartment'],
+                'link' => $_POST['link'],
+                'category' => $_POST['category']
+            ];
+            header('Location: ./register.php?db=register');
+            exit();
+        }
         $sql=$pdo->query('select max(salon_id) from salon');
         foreach($sql as $row){
             $maxid = $row['max(salon_id)'];
@@ -20,13 +38,6 @@
             $_POST['category']
         ]);
         $db = 'register';
-        //サロン名が同じとき
-        /*$sql = $pdo -> query('select * from salon');
-        foreach($sql as $row){
-            if($row["salon_name"] == $_POST["salon_name"]){
-                
-            }
-        }*/
     }else if($_POST['db'] == 'update'){
         $sql=$pdo->prepare('update salon set salon_name=?, phone=?, prefectures=?, city=?, address=?, apartment=?, link=?, category_id=? where salon_id=?');
         $sql->execute([
