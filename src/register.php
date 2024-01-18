@@ -31,7 +31,7 @@
             echo '<label  class="inp-select">';
             echo '<select name="category" required>';
             if(!isset($_SESSION['newSalon']['category'])){
-                echo '<option value="" class="gray" hidden>カテゴリ</option>';
+                echo '<option value="" hidden><font color="#aaaaaa">カテゴリ</font></option>';
             }else{
                 $pdo=new PDO($connect, USER, PASS);
                 $sql=$pdo->prepare('select * from category where category_id=?');
